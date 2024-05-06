@@ -29,7 +29,20 @@
             max-height: 90%;
             padding: 5px;
         }
-
+        
+label {
+    width: 500px;
+    height:200px;
+    position: absolute;
+    right: 2%;
+    top: 5px;
+    display: block;
+    background: #7f00ff;
+    border-radius: 100px;
+    box-shadow: inset 0px 5px 15px #000000, inset 0px -5px 15px #FFFFFF;
+    cursor: pointer;
+}
+        
 body {
     background-color: #2f005c;
     display: flex;
@@ -69,6 +82,8 @@ main {
     color: rgb(161, 20, 255);
     font-size: 30px;
 
+}
+
         .box {
             position: absolute;
             bottom: 7%;
@@ -83,16 +98,7 @@ main {
             
         }
 
-label {
-    width: 500px;
-    height:200px;
-    position: relative;
-    display: block;
-    background: #7f00ff;
-    border-radius: 100px;
-    box-shadow: inset 0px 5px 15px #000000, inset 0px -5px 15px #FFFFFF;
-    cursor: pointer;
-}
+
 
 
 footer {
@@ -134,8 +140,12 @@ footer {
             display: inline-block;
             margin: 2px;
         }
+
+    
     </style>
 </head>
+
+    
 <body>
 <header>
     <div class="header-image-container">
@@ -143,10 +153,10 @@ footer {
     </div>
 </header>
 
+ 
 
 <input type="checkbox" id="darkmode"/>
-<label for="darkmode"></label>   
-    
+<label for="darkmode"></label>      
     
     
 <aside class="left">
@@ -161,7 +171,7 @@ footer {
     </div>
 
     <aside class="box" anchor="main">
-        <strong>This is a box</strong>
+        <strong font-size: 10px>This is a box</strong>
         <h1>Testing testing mother fucker</h1>
         <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
     </aside>
