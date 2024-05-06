@@ -33,16 +33,21 @@
 body {
     background-color: #2f005c;
     display: flex;
-    flex-direction: column; /* Stack children vertically */
+    flex-direction: column;
     min-height: 100vh; /* Ensure body takes up at least the full viewport height */
     margin: 0; /* Remove default margin */
+    position: relative; /* Ensure footer is positioned relative to body */
 }
 
 aside {
     padding: 2rem;
     background-color: #3b3b3b;
     margin: 5px;
-    width: 20%; /* Set a fixed width for the aside */
+    width: 20%;
+    position: absolute;
+    top: 10%; /* Adjust to leave space for header */
+    bottom: 0;
+    left: 0;
 }
 
 main {
@@ -50,7 +55,7 @@ main {
     background-color: #3b3b3b;
     margin: 5px;
     flex: 1; /* Let main take up the remaining space */
-    display: flex; /* Set main as flex container */
+    display: flex;
     justify-content: center; /* Center main content horizontally */
     align-items: center; /* Center main content vertically */
 }
@@ -60,6 +65,9 @@ footer {
     width: 100%;
     padding: 10px;
     background-color: #3b3b3b;
+    position: fixed;
+    bottom: 0;
+    left: 0;
 }
 
 
