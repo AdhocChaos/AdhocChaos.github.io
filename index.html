@@ -54,7 +54,11 @@ header img {
         }
 
         .button-container {
-            text-align: center; /* Optional: to center the buttons horizontally */
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 250px;
+
         }
         .button-container button {
             display: inline-block;
@@ -81,34 +85,22 @@ header img {
 </header>
 
     <main>
-        <div>
-            <select id="dropdown1" onchange="redirectToPage(this.value)">
-                <option value="">Guess Whos</option>
-                <option value="Stories.html">Stories</option>
-                <option value="Marvel.html">Marvel</option>
-                <option value="Stardew.html">Stardew Valley</option>
-                <option value="ATLA.html">Avatar: the Last Airbender</option>
-            </select>
-            <select id="dropdown2" onchange="redirectToPage(this.value)">
-                <option value=>Other</option>
-                <option value="e.html">Please</option>
-                <option value="f.html">Ignore</option>
-                <option value="g.html">All of</option>
-                <option value="h.html">These</option>
-            </select>
-        </div>
-
-
-
+    <section>
         <h1>Welcome to Fandom Guess Who!</h1>
         <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
+        <p>I still have no idea what I am going to put in this dang section- wait this is my website I can say fuck :0 </p>
+    </section>
+
+
+<aside>
     <div class="button-container">
     <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
     <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
     <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar: the Last Airbender</button>
     <button class="button" onclick="window.location.href = 'Stardew.html';">Stardew Valley</button>
-
-</div>
+    </div>
+</aside>
+    
     </main>
 
     <footer>
