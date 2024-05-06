@@ -58,17 +58,19 @@ main {
     width: 60%; /* Set main to take up 60% of the screen width */
     display: flex;
     justify-content: center; /* Center main content horizontally */
-    top: 10%;
-    left: 20%
     align-items: flex-start; /* Center main content vertically */
 }
 
+.allses {
+    display: flex;
+    gap: 5px;
+}
 
 
 footer {
     color: white;
     width: 100%;
-    padding: 10px;
+    padding: 3px;
     background-color: black;
     position: fixed;
     bottom: 0;
@@ -109,7 +111,8 @@ footer {
     </div>
 </header>
 
-<aside>
+
+<aside class=allses>
     <div class="button-container">
         <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
         <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
@@ -118,7 +121,7 @@ footer {
     </div>
 </aside>
 
-<main>
+<main class=allses>
     <section>
         <h1>Welcome to Fandom Guess Who!</h1>
         <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
