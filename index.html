@@ -18,6 +18,13 @@
             display: block; /* Make the buttons block elements */
         }
 
+        .button-container {
+            text-align: center; /* Optional: to center the buttons horizontally */
+        }
+        .button-container button {
+            display: inline-block;
+            margin: 5px; /* Optional: adjust margin as needed */
+
         /* Add your CSS styles here */
         header {
             background-image: url('ac.png');
@@ -57,7 +64,7 @@
         <!-- Main content of your page goes here -->
         <h1>Welcome to Fandom Guess Who!</h1>
         <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
-    </div>
+    <div class="button-container">
     <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories Guess Who</button>
     <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel Guess Who</button>
     <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar the Last Airbender Guess Who</button>
