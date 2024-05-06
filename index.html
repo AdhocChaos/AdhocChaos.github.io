@@ -86,12 +86,8 @@ main {
 }
 
 .box {
-    position: fixed;
-    bottom: 7%;
-    top: 12%;
-    width: 17%;
-    right: 0;
-    transform: translate(0, -50%);
+    position: absolute;
+    left: anchor(right);
     border-radius: 6px;
     padding: 2px;
     background-color: #3b3b3b;
@@ -189,7 +185,7 @@ footer {
         <p>AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
     </aside>
 
-<main class="main">
+<main class="main" padding: 2px>
     <section>
         <strong> <span font-size: 10px>
             Welcome to Fandom Guess Who!    
@@ -217,7 +213,7 @@ footer {
 
 <footer>
     <!-- Footer content goes here -->
-    <p>
+    <p style="text-align: center;">
         Thank you for your patience as this is a work in progress :)
     </p>
 </footer>
