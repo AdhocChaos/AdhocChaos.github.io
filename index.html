@@ -42,19 +42,21 @@
             padding: 2rem;
             background-color: #3b3b3b;
             margin: 5px;
-            width: 20%; /* Added */
+            width: 20%; /* Set a fixed width */
+            flex-shrink: 0; /* Prevent the aside from shrinking */
         }
 
         main {
             padding: 2rem;
             background-color: #3b3b3b;
             margin: 5px;
-            flex: 1; /* Added */
-            display: flex; /* Added */
-            justify-content: center; /* Added */
-            align-items: center; /* Added */
+            flex: 1; /* Let main take up the remaining space */
+            display: flex; /* Set main as flex container */
+            flex-direction: column; /* Stack children vertically */
+            justify-content: center; /* Center children vertically */
+            align-items: center; /* Center children horizontally */
         }
-
+        
         footer {
             color: white;
             width: 100%;
