@@ -10,81 +10,104 @@
             margin: 5%;
         }
 
-header {
-    background-color: black;
-    color: white; /* Optional: Set text color to contrast with the background */
+    header {
+        background-color: black;
+        color: white; /* Optional: Set text color to contrast with the background */
+        width: 100%;
+        height: 10%;
+        padding: 10px;
+        position: fixed;
+        top: 0;
+        left: 0;
+        z-index: 999; /* Optional: Ensure the header stays on top */
+    }
+
+    .header-image-container {
+        height: 100%; /* Adjust as needed */
+        display: flex; /* Ensures the container only occupies the necessary space */
+        align-items: center; /* Center the image vertically */
+    }
+
+    header img {
+        max-height: 90%; /* Set the maximum height of the image */
+        padding: 5px; /* Optional: Adjust as needed */
+        z-index: 999; /* Optional: Ensure the image stays on top */
+    }
+
+    main{
     width: 100%;
-    height: 10%;
     padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999; /* Optional: Ensure the header stays on top */
-}
+    }
 
-.header-image-container {
-    height: 100%; /* Adjust as needed */
-    display: flex; /* Ensures the container only occupies the necessary space */
-    align-items: center; /* Center the image vertically */
-}
 
-header img {
-    max-height: 90%; /* Set the maximum height of the image */
-    padding: 5px; /* Optional: Adjust as needed */
-    z-index: 999; /* Optional: Ensure the image stays on top */
-}
+    aside{
+        width: 20%;
+        float: left;
+        padding: 10px;
+        background-color: #3b3b3b;
+    }
 
-        body{
-            margin: 5%;
-            background-color:#2f005c;
-            color:white;
-        }
+    section{
+        width: 60%;
+        float: left;
+        padding: 10px;
+        background-color: #3b3b3b;
+        color: white;
+    }
+
         
-        .button {
-            font-size: 24px;
-            border-radius: 2px;
-            background-color: #181818;
-            color: rgb(161, 20, 255);
-            border: none;
-            padding: 5px 10px;
-            cursor: pointer;
-            text-align: center;
-            margin:auto;    
-            display: block; /* Make the buttons block elements */
+    body{
+        margin: 5%;
+        background-color:#2f005c;
+        color:white;
+    }
+        
+    .button {
+        font-size: 24px;
+        border-radius: 2px;
+        background-color: #181818;
+        color: rgb(161, 20, 255);
+        border: none;
+        padding: 5px 10px;
+        cursor: pointer;
+        text-align: center;
+        margin:auto;    
+        display: block; /* Make the buttons block elements */
         }
 
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-evenly;
-            height: 250px;
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-evenly;
+        height: 250px;
 
-        }
-        .button-container button {
-            display: inline-block;
-            margin: 5px; /* Optional: adjust margin as needed */
+    }
+    .button-container button {
+        display: inline-block;
+        margin: 5px; /* Optional: adjust margin as needed */
 
-        /* Add your CSS styles here */
-        header {
-            background-image: url('ac.png');
-            background-size: 200px;
-            height: auto; /* Adjust the height as needed */
-            text-align: center;
-            color: rgb(112, 0, 177);
-            padding-top: 50px; /* Adjust the padding as needed */
+    header {
+        background-image: url('ac.png');
+        background-size: 200px;
+        height: auto; /* Adjust the height as needed */
+        text-align: center;
+        color: rgb(112, 0, 177);
+        padding-top: 50px; /* Adjust the padding as needed */
         }
-        /* Add more styles as needed */
+
+
+        
     </style>
 </head>
 <body>
 
-       <header>
+<header>
     <div class="header-image-container">
         <img src="AC.png" alt="The coolest looking logo that says Adhoc Chaos with sick vaporwave aesthetics and its got purple and black and a sunset in the middle, yeah its pretty cool">
     </div>
 </header>
 
-    <main>
+<main>
     <section>
         <h1>Welcome to Fandom Guess Who!</h1>
         <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
