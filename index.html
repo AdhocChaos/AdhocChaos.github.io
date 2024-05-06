@@ -53,20 +53,22 @@ body {
 }
 
 .left {
+    display: flex; /* Ensure .left is a flex container */
+    flex-direction: column; /* Stack children vertically */
+    align-items: flex-start; /* Align items to the start of the container */
     padding: 2rem;
     background-color: #3b3b3b;
-    text-size: 10px;
+    font-size: 10px;
     margin: 2px;
     width: auto;
     position: absolute;
-    top: 14%; /* Adjust to leave space for header */
+    top: 14%;
     bottom: 7%;
     left: 0;
-    padding: 2px;
     border-radius: 6px;
-    align-items: center;
-
 }
+
+
 
 main {
     background-color: #3b3b3b;
