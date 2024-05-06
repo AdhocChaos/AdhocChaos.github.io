@@ -6,118 +6,107 @@
     <title>AdhocChaos</title>
     <link rel="icon" type="image/x-icon" href="acfav.png">
     <style>
-
-
-header {
-    background-color: black;
-    color: white; /* Optional: Set text color to contrast with the background */
-    width: 100%;
-    height: 10%;
-    padding: 10px;
-    position: fixed;
-    top: 0;
-    left: 0;
-    z-index: 999; /* Optional: Ensure the header stays on top */
-}
-
-.header-image-container {
-    height: 100%; /* Adjust as needed */
-    display: flex; /* Ensures the container only occupies the necessary space */
-    align-items: center; /* Center the image vertically */
-    justify-content: space-evenly;
-}
-
-header img {
-    max-height: 90%; /* Set the maximum height of the image */
-    padding: 5px; /* Optional: Adjust as needed */
-    z-index: 999; /* Optional: Ensure the image stays on top */
-}
-
-
-    body{
-
-        background-color:#2f005c;
-        display: flex;
-        align-items: auto;
-        
-    }
-
-        
-    aside{
-        padding: 2rem;
-        background-color: #3b3b3b;
-        margin: 5px;
-    }
-
-
-    main{
-        padding: 2rem;
-        background-color: #3b3b3b;
-        margin: 5px;
-
-    }
-
-
-        
-    .button {
-        font-size: 24px;
-        border-radius: 2px;
-        background-color: #181818;
-        color: rgb(161, 20, 255);
-        border: none;
-        padding: 5px 10px;
-        cursor: pointer;
-        text-align: center;
-        margin:auto;    
-        display: block; /* Make the buttons block elements */
+        header {
+            background-color: black;
+            color: white;
+            width: 100%;
+            height: 10%;
+            padding: 10px;
+            position: fixed;
+            top: 0;
+            left: 0;
+            z-index: 999;
         }
 
-    .button-container {
-        display: flex;
-        flex-direction: column;
-        justify-content: space-evenly;
-        height: 250px;
+        .header-image-container {
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: space-evenly;
+        }
 
-    }
-    .button-container button {
-        display: inline-block;
-        margin: 5px; /* Optional: adjust margin as needed */
+        header img {
+            max-height: 90%;
+            padding: 5px;
+        }
 
-    footer {
-        color: white;
-        width: 100%;
-        padding: 10px;
-        position: fixed;
-        bottom: 0;
-        left: 0;
-        z-index: 999; /* Optional: Adjust the z-index if needed */
-        background-color: #3b3b3b;
-    }
-        
-        
+        body {
+            background-color: #2f005c;
+            display: flex;
+            flex-direction: column; /* Added */
+            min-height: 100vh; /* Added */
+            margin: 0; /* Added to remove default margin */
+        }
 
-        
+        aside {
+            padding: 2rem;
+            background-color: #3b3b3b;
+            margin: 5px;
+            width: 20%; /* Added */
+        }
+
+        main {
+            padding: 2rem;
+            background-color: #3b3b3b;
+            margin: 5px;
+            flex: 1; /* Added */
+            display: flex; /* Added */
+            justify-content: center; /* Added */
+            align-items: center; /* Added */
+        }
+
+        footer {
+            color: white;
+            width: 100%;
+            padding: 10px;
+            position: fixed;
+            bottom: 0;
+            left: 0;
+            z-index: 999;
+            background-color: #3b3b3b;
+        }
+
+        .button {
+            font-size: 24px;
+            border-radius: 2px;
+            background-color: #181818;
+            color: rgb(161, 20, 255);
+            border: none;
+            padding: 5px 10px;
+            cursor: pointer;
+            text-align: center;
+            margin: auto;
+            display: block;
+        }
+
+        .button-container {
+            display: flex;
+            flex-direction: column;
+            justify-content: space-evenly;
+            height: 250px;
+        }
+
+        .button-container button {
+            display: inline-block;
+            margin: 5px;
+        }
     </style>
 </head>
-
+<body>
 <header>
     <div class="header-image-container">
         <img src="AC.png" alt="The coolest looking logo that says Adhoc Chaos with sick vaporwave aesthetics and its got purple and black and a sunset in the middle, yeah its pretty cool">
     </div>
 </header>
 
-<body>
-
-    
 <aside>
     <div class="button-container">
-    <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
-    <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
-    <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar: the Last Airbender</button>
-    <button class="button" onclick="window.location.href = 'Stardew.html';">Stardew Valley</button>
+        <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
+        <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
+        <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar: the Last Airbender</button>
+        <button class="button" onclick="window.location.href = 'Stardew.html';">Stardew Valley</button>
     </div>
 </aside>
-
 
 <main>
     <section>
@@ -125,21 +114,18 @@ header img {
         <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
         <p>I still have no idea what I am going to put in this dang section- wait this is my website I can say fuck :0 </p>
     </section>
+</main>
 
-
-    </main>
-    
-
-    
-    <footer>
-        <!-- Footer content goes here -->
-        <p>Thank you for your patience as this is a work in progress</p>
-    </footer>
+<footer>
+    <!-- Footer content goes here -->
+    <p>Thank you for your patience as this is a work in progress</p>
+</footer>
 </body>
 <script>
-        function redirectToPage(page) {
-            if (page) {
-                window.location.href = page;
-            }
+    function redirectToPage(page) {
+        if (page) {
+            window.location.href = page;
         }
+    }
+</script>
 </html>
