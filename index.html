@@ -30,43 +30,38 @@
             padding: 5px;
         }
 
-        body {
-            background-color: #2f005c;
-            display: flex;
-            flex-direction: column; /* Added */
-            min-height: 100vh; /* Added */
-            margin: 0; /* Added to remove default margin */
-        }
+body {
+    background-color: #2f005c;
+    display: flex;
+    flex-direction: column; /* Stack children vertically */
+    min-height: 100vh; /* Ensure body takes up at least the full viewport height */
+    margin: 0; /* Remove default margin */
+}
 
-        aside {
-            padding: 2rem;
-            background-color: #3b3b3b;
-            margin: 5px;
-            width: 20%; /* Set a fixed width */
-            flex-shrink: 0; /* Prevent the aside from shrinking */
-        }
+aside {
+    padding: 2rem;
+    background-color: #3b3b3b;
+    margin: 5px;
+    width: 20%; /* Set a fixed width for the aside */
+}
 
-        main {
-            padding: 2rem;
-            background-color: #3b3b3b;
-            margin: 5px;
-            flex: 1; /* Let main take up the remaining space */
-            display: flex; /* Set main as flex container */
-            flex-direction: column; /* Stack children vertically */
-            justify-content: center; /* Center children vertically */
-            align-items: center; /* Center children horizontally */
-        }
-        
-        footer {
-            color: white;
-            width: 100%;
-            padding: 10px;
-            position: fixed;
-            bottom: 0;
-            left: 0;
-            z-index: 999;
-            background-color: #3b3b3b;
-        }
+main {
+    padding: 2rem;
+    background-color: #3b3b3b;
+    margin: 5px;
+    flex: 1; /* Let main take up the remaining space */
+    display: flex; /* Set main as flex container */
+    justify-content: center; /* Center main content horizontally */
+    align-items: center; /* Center main content vertically */
+}
+
+footer {
+    color: white;
+    width: 100%;
+    padding: 10px;
+    background-color: #3b3b3b;
+}
+
 
         .button {
             font-size: 24px;
