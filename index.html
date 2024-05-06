@@ -22,10 +22,15 @@
             z-index: 999; /* Optional: Ensure the header stays on top */
         }
 
+        .header-image-container {
+            height: 100%; /* Adjust as needed */
+            display: inline-flex; /* Ensures the container only occupies the necessary space */
+            align-items: center; /* Center the image vertically */
+    }
+
         header img {
             display: inline-block;
             vertical-align: middle; /* Optional: Align the image vertically */'
-            height: 9%;
             padding: 5px;
             z-index: 999;
         }
@@ -70,8 +75,13 @@
 </head>
 <body>
 
-        <header>
+       <header>
+    <div class="header-image-container">
         <img src="AC.png" alt="The coolest looking logo that says Adhoc Chaos with sick vaporwave aesthetics and its got purple and black and a sunset in the middle, yeah its pretty cool">
+    </div>
+</header>
+
+    <main>
         <div>
             <select id="dropdown1" onchange="redirectToPage(this.value)">
                 <option value="">Guess Whos</option>
@@ -88,11 +98,9 @@
                 <option value="h.html">These</option>
             </select>
         </div>
-    </header>
 
 
-    <main>
-        <!-- Main content of your page goes here -->
+
         <h1>Welcome to Fandom Guess Who!</h1>
         <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
     <div class="button-container">
