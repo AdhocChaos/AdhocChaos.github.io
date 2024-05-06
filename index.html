@@ -55,11 +55,13 @@ main {
     padding: 2rem;
     background-color: #3b3b3b;
     margin: 5px;
-    flex: 2; /* Let main take up the remaining space */
+    width: calc(100% - 20%); /* Calculate main width (100% - 20% for aside) */
+    flex-grow: 0; /* Ensure main does not grow beyond its calculated width */
     display: flex;
     justify-content: center; /* Center main content horizontally */
     align-items: center; /* Center main content vertically */
 }
+
 
 footer {
     color: white;
