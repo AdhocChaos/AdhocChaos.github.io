@@ -43,7 +43,7 @@
                 <option value="ATLA.html">Avatar: the Last Airbender</option>
             </select>
             <select id="dropdown2" onchange="redirectToPage(this.value)">
-                <option value="">Select Page E-H</option>
+                <option value=>Other</option>
                 <option value="e.html">Page E</option>
                 <option value="f.html">Page F</option>
                 <option value="g.html">Page G</option>
@@ -57,8 +57,7 @@
     <main>
         <!-- Main content of your page goes here -->
         <h1>Welcome to Fandom Guess Who!</h1>
-        <p>This is the main content of your welcome page.</p>
-        <p>Click for Stories I suppose</p>
+        <p>Select a drop down or button or whatever is functional to navigate to your desired Guess Who game</p>
     </div>
     <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories Guess Who</button>
     <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel Guess Who</button>
@@ -73,7 +72,7 @@
         <p>Thank you for your patience as this is a work in progress</p>
     </footer>
 </body>
-        <script>
+<script>
         function redirectToPage(page) {
             if (page) {
                 window.location.href = page;
