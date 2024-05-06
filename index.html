@@ -10,31 +10,30 @@
             margin: 5%;
         }
 
-        header {
-            background-color: black;
-            color: white; /* Optional: Set text color to contrast with the background */
-            width: 100%;
-            height: 10%;
-            padding: 10px;
-            position: fixed;
-            top: 0;
-            left: 0;
-            z-index: 999; /* Optional: Ensure the header stays on top */
-        }
+header {
+    background-color: black;
+    color: white; /* Optional: Set text color to contrast with the background */
+    width: 100%;
+    height: 10%;
+    padding: 10px;
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 999; /* Optional: Ensure the header stays on top */
+}
 
-        .header-image-container {
-            height: 100%; /* Adjust as needed */
-            display: inline-flex; /* Ensures the container only occupies the necessary space */
-            align-items: center; /* Center the image vertically */
-    }
+.header-image-container {
+    height: 100%; /* Adjust as needed */
+    display: flex; /* Ensures the container only occupies the necessary space */
+    align-items: center; /* Center the image vertically */
+}
 
-        header img {
-            display: inline-block;
-            vertical-align: middle; /* Optional: Align the image vertically */'
-            padding: 5px;
-            z-index: 999;
-        }
-        
+header img {
+    max-height: 90%; /* Set the maximum height of the image */
+    padding: 5px; /* Optional: Adjust as needed */
+    z-index: 999; /* Optional: Ensure the image stays on top */
+}
+
         body{
             margin: 5%;
             background-color:#2f005c;
