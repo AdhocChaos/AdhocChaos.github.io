@@ -32,6 +32,32 @@
 </head>
 <body>
 
+        <header>
+        <h1>Welcome to My Website</h1>
+        <div>
+            <select id="dropdown1" onchange="redirectToPage(this.value)">
+                <option value="">Guess Whos</option>
+                <option value="Stories.html">Stories</option>
+                <option value="MarvelGuessWho.html">Marvel</option>
+                <option value="Stardew.html">Stardew Valley</option>
+                <option value="ATLA.html">Avatar: the Last Airbender</option>
+            </select>
+            <select id="dropdown2" onchange="redirectToPage(this.value)">
+                <option value="">Select Page E-H</option>
+                <option value="e.html">Page E</option>
+                <option value="f.html">Page F</option>
+                <option value="g.html">Page G</option>
+                <option value="h.html">Page H</option>
+            </select>
+        </div>
+    </header>
+
+    <script>
+        function redirectToPage(page) {
+            if (page) {
+                window.location.href = page;
+            }
+        }
 
     <main>
         <!-- Main content of your page goes here -->
