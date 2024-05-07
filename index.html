@@ -45,7 +45,7 @@
             align-items: flex-start; /* Align items to the start of the container */
             padding: 1rem;
             border-radius: 6px;
-            width: 17%;
+            width: 12%;
             position: fixed;
             top: 12%;
             left: 0;
@@ -53,14 +53,16 @@
 
         }
         
-        .button-container {
-            display: flex;
-            flex-direction: column;
-            gap: 5px;
-            bottom: 5%;
-            height: 80vh;
 
-        }
+    .button-container {
+        display: flex;
+        flex-direction: column;
+        gap: 5px;
+        height: 100%; /* Take up maximum height */
+        overflow-y: auto; /* Enable vertical scrolling */
+    }
+
+
 
         .button {
             font-size: 18px;
