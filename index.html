@@ -39,20 +39,16 @@
             max-height: 80px;
         }
 
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 20px;
-        }
-
         .left {
             flex: 0 0 auto;
             background-color: #202020;
             padding: 20px;
             border-radius: 6px;
+            width: 17%;
+            position: fixed;
+            top: 10%;
+            bottom: 5%;
+            left: 0;
         }
 
         .button-container {
@@ -70,6 +66,18 @@
             border: none;
             cursor: pointer;
             padding: 10px 20px;
+        }
+
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-direction: column;
+            padding: 20px;
+            margin-left: 17%; /* Match the width of .left */
+            background-color: #202020;
+
         }
     </style>
 </head>
@@ -94,9 +102,9 @@
             <button class="button" onclick="window.location.href = 'Stardew.html';">Placeholder</button>
             <button class="button" onclick="window.location.href = 'Starwars.html';">Placeholder</button>
             <button class="button" onclick="window.location.href = 'LOTR.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'Stories.html';">Placeholder Wars</button>
+            <button class="button" onclick="window.location.href = 'Stories.html';">Placeholder</button>
             <button class="button" onclick="window.location.href = 'Marvel.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar: the Last Placeholder</button>
+            <button class="button" onclick="window.location.href = 'ATLA.html';">Placeholder</button>
         </div>
     </div>
 
