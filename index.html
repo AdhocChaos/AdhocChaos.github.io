@@ -19,7 +19,6 @@
             color: #8756d1;
             min-height: 100vh;
             display: flex;
-            flex-direction: column;
         }
 
         header {
@@ -27,6 +26,7 @@
             color: white;
             padding: 10px;
             text-align: center;
+            width: 100%;
         }
 
         .header-image-container {
@@ -47,10 +47,16 @@
             padding: 20px;
         }
 
+        .left {
+            flex: 0 0 auto;
+            background-color: #202020;
+            padding: 20px;
+            border-radius: 6px;
+        }
+
         .button-container {
             display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
+            flex-direction: column;
             gap: 10px;
             margin-top: 20px;
         }
@@ -70,6 +76,7 @@
             color: white;
             text-align: center;
             padding: 10px;
+            width: 100%;
         }
     </style>
 </head>
@@ -80,23 +87,7 @@
         </div>
     </header>
 
-    <main>
-        <section>
-            <strong>Welcome to Fandom Guess Who!</strong>
-            <p>
-                Do you have any ideas on a franchise you would like to see a Guess Who page for? Contact me through Discord or Email with 16-30 characters with their respective names and a picture of their face.
-            </p>
-            <p>
-                It works best if the picture is a clear photo of their face so you can see the color of their eyes and hair, as well as any defining features such as Aang's arrow or scars/tattoos/piercings.
-            </p>
-            <p>
-                Ideally, 24 pictures at 2.3in x 2.3in at 96px/in :)
-            </p>
-            <strong>Contact:</strong>
-            <p>Discord: .adhocchaos</p>
-            <p>Email: AdhocChaos7@gmail.com</p>
-        </section>
-
+    <div class="left">
         <div class="button-container">
             <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
             <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
@@ -114,6 +105,24 @@
             <button class="button" onclick="window.location.href = 'Marvel.html';">Placeholder</button>
             <button class="button" onclick="window.location.href = 'ATLA.html';">Placeholder</button>
         </div>
+    </div>
+
+    <main>
+        <section>
+            <strong>Welcome to Fandom Guess Who!</strong>
+            <p>
+                Do you have any ideas on a franchise you would like to see a Guess Who page for? Contact me through Discord or Email with 16-30 characters with their respective names and a picture of their face.
+            </p>
+            <p>
+                It works best if the picture is a clear photo of their face so you can see the color of their eyes and hair, as well as any defining features such as Aang's arrow or scars/tattoos/piercings.
+            </p>
+            <p>
+                Ideally, 24 pictures at 2.3in x 2.3in at 96px/in :)
+            </p>
+            <strong>Contact:</strong>
+            <p>Discord: .adhocchaos</p>
+            <p>Email: AdhocChaos7@gmail.com</p>
+        </section>
     </main>
 
     <footer>
