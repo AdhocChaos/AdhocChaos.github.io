@@ -40,7 +40,7 @@
         }
 
         .left {
-            flex: 0 0 auto;
+            display: flex;
             background-color: #202020;
             align-items: flex-start; /* Align items to the start of the container */
             padding: 10px;
@@ -48,16 +48,18 @@
             width: 17%;
             position: fixed;
             top: 10%;
-            bottom: 5%;
             left: 0;
-            box-sizing: 0;
+            box-sizing: content-box;
+            margin-top: 12%;
+
         }
         
         .button-container {
             display: flex;
             flex-direction: column;
             gap: 5px;
-            margin-top: 12%;
+            bottom: 5%;
+
         }
 
         .button {
