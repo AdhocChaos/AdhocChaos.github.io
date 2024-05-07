@@ -18,8 +18,8 @@
             background-color: #2a0069;
             color: #8756d1;
             min-height: 100vh;
-            display: flex;
-            flex-direction: column;
+            display: grid;
+            grid-template-rows: auto 1fr auto;
         }
 
         header, footer {
@@ -27,7 +27,6 @@
             color: white;
             padding: 10px;
             text-align: center;
-            width: 100%;
         }
 
         .header-image-container {
@@ -40,9 +39,7 @@
         }
 
         .left {
-            display: flex;
             background-color: #202020;
-            align-items: flex-start; /* Align items to the start of the container */
             padding: 1rem;
             border-radius: 6px;
             width: 17%;
@@ -51,7 +48,6 @@
             left: 0;
             box-sizing: content-box;
             margin-top: 12%;
-
         }
         
         .button-container {
@@ -59,7 +55,6 @@
             flex-direction: column;
             gap: 5px;
             bottom: 5%;
-
         }
 
         .button {
@@ -73,17 +68,12 @@
         }
 
         main {
-            flex: 1;
             display: flex;
             justify-content: center;
             align-items: center;
             flex-direction: column;
             padding: 10px;
-            top: 10%;
-            bottom: 5%;
-            margin-left: 17%; /* Match the width of .left */
             background-color: #202020;
-
         }
     </style>
 </head>
