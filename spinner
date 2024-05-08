@@ -1,0 +1,37 @@
+<html>
+  <head>
+    <title>Movie Selector</title>
+    <link href="style.css" rel="stylesheet" type="text/css" />
+  </head>
+  <body>
+
+    <h1><center> Who's drinking? <br>
+</center><br>
+    
+	<div id="mainbox" class="mainbox">
+		<div id="box" class="box">
+			<div class="box1">
+				<span class="span1"><b>Spinner's left</b></span>
+				<span class="span2"><b>All the Girls</b></span>
+				<span class="span3"><b>Introverts</b></span>
+				<span class="span4"><b>Youngest and Oldest</b></span>
+				<span class="span5"><b>Everyone BUT you!</b></span>
+
+			</div>
+			<div class="box2">
+				<span class="span1"><b>EVERYONE DRINKS</b></span>
+				<span class="span2"><b>Truth or Dare or Drink</b></span>
+				<span class="span3"><b>Pick 2 to drink</b></span>
+				<span class="span4"><b><i class="fa-solid fa-rotate-reverse"></i>Reverse!</b></span>
+				<span class="span5"><b>Everyone with tattoos</b></span>
+
+			</div>
+		</div>
+
+		<button class="spin" onclick="myfunction()">SPIN</button>
+	</div>
+
+  
+  <script src="script.js"></script>
+  </body>
+</html>
