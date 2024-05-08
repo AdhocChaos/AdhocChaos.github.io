@@ -6,61 +6,118 @@
     <title>AdhocChaos</title>
     <link rel="icon" type="image/x-icon" href="acfav.png">
     <style>
-        /* CSS Reset */
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
-
         body {
-            font-family: "Garamond", serif;
+            display: grid;
+            place-content: center;
+            min-height: 100vh;
             background-color: #2a0069;
             color: #8756d1;
-            min-height: 100vh;
-            display: flex;
-            flex-direction: column;
         }
-
+    
         header, footer {
             background-color: black;
             color: white;
-            padding: 10px;
+            padding: .5rem;
             text-align: center;
             width: 100%;
         }
 
-        .header-image-container {
-            display: flex;
-            justify-content: center;
-        }
 
         header img {
-            max-height: 80px;
+            max-height: 5rem;
         }
 
-        .left {
-            display: flex;
-            background-color: #202020;
-            align-items: flex-start; /* Align items to the start of the container */
-            padding: 1rem;
-            border-radius: 6px;
-            width: 12%;
+        .middle {
+            display: grid;
+            gap: 1rem;
+            grid-auto-columns: 1fr;
+            padding-block: 2rem;
+            width: 100%;
+            margin-inline: auto;
+            /* grid-template-areas:  */
+            /* 'header header header header header'
+            'left middler middler middler b1r'
+            'left middler middler middler b1r'
+            'left middler middler middler b2r'
+            'left middler middler middler b2r'; */
+        }
+
+        .header {
             position: fixed;
-            top: 12%;
+            top: 0;
             left: 0;
-            box-sizing: content-box;
-
+            right: 0;
         }
-        
+        .footer {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            right: 0;
+        }
+        .left {
+            grid-area: L;
+        }
+        .middler {
+            grid-area: middler;
+        }
+        .box1-right {
+            grid-area: b1r;
+        }
+        .box2-right {
+            grid-area: b2r;
+        }
 
-    .button-container {
+
+        @media screen and (min-width: 33em) {
+            .middle {
+                grid-template-areas:
+                "L middler"
+                "L middler"
+                "L middler"
+                "L middler"
+                "b1r b1r"
+                "b2r b2r";
+            }
+        }
+
+        @media screen and (min-width: 38em) {
+            .middle {
+                grid-template-areas:
+                "L L middler middler"
+                "L L middler middler"
+                "L L middler middler"
+                "b1r b1r b2r b2r"
+                "b1r b1r b2r b2r";
+            }
+        }
+
+        @media screen and (min-width: 54em) {
+            .middle {
+                grid-template-areas:
+                "L middler middler middler b1r"
+                "L middler middler middler b1r"
+                "L middler middler middler b2r"
+                "L middler middler middler b2r"
+
+            }
+        }
+
+        @media screen and (min-width: 75em) {
+            .middle {
+                grid-template-areas:
+                "one one two five"
+                "three four four five";
+        }
+            }
+
+
+        .button-container {
         display: flex;
         flex-direction: column;
         gap: 5px;
-        height: 100%; /* Take up maximum height */
+        /* height: 100%; Take up maximum height */
         overflow-y: auto; /* Enable vertical scrolling */
-    }
+        }
 
 
 
@@ -71,71 +128,73 @@
             color: #8756d1;
             border: none;
             cursor: pointer;
-            padding: 10px 20px;
+            padding: .5rem 1rem;
         }
 
-        main {
-            flex: 1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            flex-direction: column;
-            padding: 10px;
-            top: 10%;
-            bottom: 5%;
-            margin-left: 17%; /* Match the width of .left */
-            background-color: #202020;
-
-        }
     </style>
 </head>
+
+<!-- -------------------------------------------------------- -->
+
+
 <body>
-    <header>
-        <div class="header-image-container">
-            <img src="AC.png" alt="The coolest looking logo that says Adhoc Chaos with sick vaporwave aesthetics and its got purple and black and a sunset in the middle, yeah its pretty cool">
-        </div>
-    </header>
+        <header>
+            <div class="header-image-container">
+                <img src="AC.png" alt="The coolest looking logo that says Adhoc Chaos with sick vaporwave aesthetics and its got purple and black and a sunset in the middle, yeah its pretty cool">
+            </div>
+        </header>
 
-    <div class="left">
-        <div class="button-container">
-            <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
-            <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
-            <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar: the Last Airbender</button>
-            <button class="button" onclick="window.location.href = 'Stardew.html';">Stardew Valley</button>
-            <button class="button" onclick="window.location.href = 'Starwars.html';">Star Wars</button>
-            <button class="button" onclick="window.location.href = 'LOTR.html';">Lord of the Rings</button>
-            <button class="button" onclick="window.location.href = 'Stories.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'Marvel.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'ATLA.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'Stardew.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'Starwars.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'LOTR.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'Stories.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'Marvel.html';">Placeholder</button>
-            <button class="button" onclick="window.location.href = 'ATLA.html';">Placeholder</button>
-        </div>
-    </div>
+        <main class="middle">
 
-    <main>
-        <section>
-            <strong>Welcome to Fandom Guess Who!</strong>
-            <p>
-                Do you have any ideas on a franchise you would like to see a Guess Who page for? Contact me through Discord or Email with 16-30 characters with their respective names and a picture of their face.
-            </p>
-            <p>
-                It works best if the picture is a clear photo of their face so you can see the color of their eyes and hair, as well as any defining features such as Aang's arrow or scars/tattoos/piercings.
-            </p>
-            <p>
-                Ideally, 24 pictures at 2.3in x 2.3in at 96px/in :)
-            </p>
-            <strong>Contact:</strong>
-            <p>Discord: .adhocchaos</p>
-            <p>Email: AdhocChaos7@gmail.com</p>
-        </section>
-    </main>
+            <div class="left">
+                <div class="button-container">
+                    <button class="button" onclick="window.location.href = 'Stories.html';">Theives Stories</button>
+                    <button class="button" onclick="window.location.href = 'Marvel.html';">Marvel</button>
+                    <button class="button" onclick="window.location.href = 'ATLA.html';">Avatar: the Last Airbender</button>
+                    <button class="button" onclick="window.location.href = 'Stardew.html';">Stardew Valley</button>
+                    <button class="button" onclick="window.location.href = 'Starwars.html';">Star Wars</button>
+                    <button class="button" onclick="window.location.href = 'LOTR.html';">Lord of the Rings</button>
+                    <button class="button" onclick="window.location.href = 'Stories.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'Marvel.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'ATLA.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'Stardew.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'Starwars.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'LOTR.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'Stories.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'Marvel.html';">Placeholder</button>
+                    <button class="button" onclick="window.location.href = 'ATLA.html';">Placeholder</button>
+                </div>
+            </div>
+            <section class="middler">
+                <strong>Welcome to Fandom Guess Who!</strong>
+                <p>
+                    Do you have any ideas on a franchise you would like to see a Guess Who page for? Contact me through Discord or Email with 16-30 characters with their respective names and a picture of their face.
+                </p>
+                <p>
+                    It works best if the picture is a clear photo of their face so you can see the color of their eyes and hair, as well as any defining features such as Aang's arrow or scars/tattoos/piercings.
+                </p>
+                <p>
+                    Ideally, 24 pictures at 2.3in x 2.3in at 96px/in :)
+                </p>
+                <strong>Contact:</strong>
+                <p>Discord: .adhocchaos</p>
+                <p>Email: AdhocChaos7@gmail.com</p>
+            </section>
+        
+            <div class="box1-right">
+            <h2 class="name">Contact info maybe?</h2>
+            <p class="position">Idk something is going here</p>
+            </div>
 
-    <footer>
-        Thank you for your patience as this is a work in progress :)
-    </footer>
+            <div class="box2-right">
+                <h2 class="name">Some other info maybe?</h2>
+                <p class="position">Idk something is going here</p>
+            </div>
+        </main>
+
+<footer>
+    Thank you for your patience as this is a work in progress :)
+</footer>
 </body>
 </html>
+
