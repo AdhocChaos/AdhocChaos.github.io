@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scoundrel Card Game</title>
+    <style>
+        body {
+            background-color: black;
+            color: white;
+            font-family: Arial, sans-serif;
+            text-align: center;
+        }
+        .card {
+            display: inline-block;
+            margin: 10px;
+            padding: 15px;
+            border: 1px solid white;
+            border-radius: 8px;
+            cursor: pointer;
+        }
+        .hearts { color: red; }
+        .diamonds { color: red; }
+        .clubs { color: blue; }
+        .spades { color: blue; }
+    </style>
+</head>
+<body>
+    <h1>Scoundrel Card Game</h1>
+    <div id="gameStatus"></div>
+    <div id="cardDeck"></div>
+    <script>
+        const deck = [];
+        const suits = ['♥', '♦', '♣', '♠'];
+        const values = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':11, 'Q':12, 'K':13, 'A':14};
+        
+        function createDeck() {
+            suits.forEach(suit => {
+                Object.keys(values).forEach(value => {
+                    deck.push({ card: `${value}${suit}`, value: values[value] });
+                });
+            });
+            deck.sort(() => Math.random() - 0.5);
+        }
+
+        function drawCards(count) {
+            return deck.splice(0, count);
+        }
+
+        function displayCards(cards) {
+            const cardDeck = document.getElementById('cardDeck');
+            cardDeck.innerHTML = '';
+            cards.forEach(card => {
+                let colorClass = card.card.includes('♥') || card.card.includes('♦') ? 'hearts' : 'clubs';
+                cardDeck.innerHTML += `<div class='card ${colorClass}'>${card.card}</div>`;
+            });
+        }
+
+        createDeck();
+        const hand = drawCards(4);
+        displayCards(hand);
+    </script>
+</body>
+</html>
