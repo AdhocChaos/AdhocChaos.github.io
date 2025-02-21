@@ -50,12 +50,12 @@
         <p><strong>Weapon:</strong> <span id="playerWeapon"></span></p>
     </div>
     <script>
-        const deck = [];
         const suits = ['♥', '♦', '♣', '♠'];
         const values = {'2':2, '3':3, '4':4, '5':5, '6':6, '7':7, '8':8, '9':9, '10':10, 'J':11, 'Q':12, 'K':13, 'A':14};
+        let deck = [];
 
         const player = {
-            name: "Player1",
+            name: "",
             health: 20,
             floor: 1,
             drawCount: 4,
@@ -67,20 +67,34 @@
             }
         };
 
-        function updatePlayerStats() {
+        function askPlayerInfo() {
+            player.name = prompt("Enter your name:", "Player1");
             document.getElementById('playerName').innerText = player.name;
+            let difficulty = prompt("Choose difficulty: Easy, Medium, or Hard", "Easy").toLowerCase();
+            createDeck(difficulty);
+        }
+
+        function updatePlayerStats() {
             document.getElementById('playerHealth').innerText = player.health;
             document.getElementById('playerFloor').innerText = player.floor;
             document.getElementById('playerWeapon').innerText = player.weapon.name;
         }
         
-        function createDeck() {
+        function createDeck(difficulty) {
+            deck = [];
             suits.forEach(suit => {
                 Object.keys(values).forEach(value => {
+                    if (
+                        (difficulty === 'medium' && (value === 'Q' || value === 'K') && (suit === '♥' || suit === '♦')) ||
+                        (difficulty === 'hard' && (value === 'J' || value === 'Q' || value === 'K') && (suit === '♥' || suit === '♦'))
+                    ) {
+                        return; 
+                    }
                     deck.push({ card: `${value}${suit}`, value: values[value] });
                 });
             });
             deck.sort(() => Math.random() - 0.5);
+            startGame();
         }
 
         function drawCards(count) {
@@ -96,10 +110,13 @@
             });
         }
 
-        createDeck();
-        const hand = drawCards(player.drawCount);
-        displayCards(hand);
-        updatePlayerStats();
+        function startGame() {
+            const hand = drawCards(player.drawCount);
+            displayCards(hand);
+            updatePlayerStats();
+        }
+
+        askPlayerInfo();
     </script>
 </body>
 </html>
