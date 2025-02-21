@@ -34,29 +34,39 @@
         .diamonds { color: red; }
         .clubs { color: blue; }
         .spades { color: blue; }
+        #startScreen { text-align: center; }
     </style>
 </head>
 <body>
-
-    <div class="game-container">
-    <h1 style="font-family: 'Lucida Console'; text-align: center>  
- ____   ____ ___  _   _ _   _ ____  ____  _____ _     <br>
-/ ___| / ___/ _ \| | | | \ | |  _ \|  _ \| ____| |    <br>
-\___ \| |  | | | | | | |  \| | | | | |_) |  _| | |    <br>
- ___) | |__| |_| | |_| | |\  | |_| |  _ <| |___| |___ <br>
-|____/ \____\___/ \___/|_| \_|____/|_| \_\_____|_____|<br>
-    </h1>        
-        <div id="gameStatus"></div>
-        <div id="cardDeck"></div>
-        <button onclick="runAway()">Run</button>
+    <div id="startScreen">
+        <h1>Scoundrel</h1>
+        <label for="playerNameInput">Enter your name:</label>
+        <input type="text" id="playerNameInput" placeholder="Player1">
+        <br>
+        <label for="difficultySelect">Choose difficulty:</label>
+        <select id="difficultySelect">
+            <option value="easy">Easy</option>
+            <option value="medium">Medium</option>
+            <option value="hard">Hard</option>
+        </select>
+        <br>
+        <button onclick="startGameSetup()">Start Game</button>
     </div>
-    <div class="sidebar">
-        <h2>Player Stats</h2>
-        <p><strong>Name:</strong> <span id="playerName"></span></p>
-        <p><strong>Health:</strong> <span id="playerHealth"></span></p>
-        <p><strong>Floor:</strong> <span id="playerFloor"></span></p>
-        <p><strong>Weapon:</strong> <span id="playerWeapon"></span></p>
-        <p><strong>Deck Remaining:</strong> <span id="deckCount"></span></p>
+    <div id="gameContent" style="display: none;">
+        <div class="game-container">
+            <h1>Scoundrel Card Game</h1>
+            <div id="gameStatus"></div>
+            <div id="cardDeck"></div>
+            <button onclick="runAway()">Run</button>
+        </div>
+        <div class="sidebar">
+            <h2>Player Stats</h2>
+            <p><strong>Name:</strong> <span id="playerName"></span></p>
+            <p><strong>Health:</strong> <span id="playerHealth"></span></p>
+            <p><strong>Floor:</strong> <span id="playerFloor"></span></p>
+            <p><strong>Weapon:</strong> <span id="playerWeapon"></span></p>
+            <p><strong>Deck Remaining:</strong> <span id="deckCount"></span></p>
+        </div>
     </div>
     <script>
         const suits = ['♥', '♦', '♣', '♠'];
@@ -78,11 +88,13 @@
             }
         };
 
-        function askPlayerInfo() {
-            player.name = prompt("Enter your name:", "Player1");
+        function startGameSetup() {
+            player.name = document.getElementById('playerNameInput').value || "Player1";
             document.getElementById('playerName').innerText = player.name;
-            let difficulty = prompt("Choose difficulty: Easy, Medium, or Hard", "Easy").toLowerCase();
+            let difficulty = document.getElementById('difficultySelect').value;
             createDeck(difficulty);
+            document.getElementById('startScreen').style.display = 'none';
+            document.getElementById('gameContent').style.display = 'flex';
         }
 
         function updatePlayerStats() {
@@ -167,8 +179,6 @@
             displayCards(hand);
             updatePlayerStats();
         }
-
-        askPlayerInfo();
     </script>
 </body>
 </html>
